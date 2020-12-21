@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-light"  style="background-color: #d1be12;">
+  <a class="navbar-brand"  [routerLink] = "['']"> <img src="../assets/barsha.png" class="w-75" alt="Logo"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+   
+  <ul class="navbar-nav" *ngIf = 'this._auth.isLogin'>
+  <li class="nav-item active">
+  <a class="nav-link" [routerLink] = "['']" routerLinkActive = "active">Home</a>
+  </li>
+  <li class="nav-item">
+  <a class="nav-link" [routerLink] = "['offre']" routerLinkActive = "active">Offres</a>
+  </li>
+<li class="nav-item">
+<a class="nav-link" [routerLink] = "['calendrier']" routerLinkActive = "active" >Calendrier</a>
+</li>
+
+
+  </ul>
+
+  </div>
+ 
+  <div  class="float-right"  *ngIf = 'this._auth.isLogin'>
+ 
+  
+    <a href="#" (click)="deconnexion()" >Deconnexion</a>
+ 
+    </div>
+
+  </nav>
+  
+  <router-outlet></router-outlet>

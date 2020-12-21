@@ -1,0 +1,17 @@
+
+<div  class="col-md-8 mx-auto">
+    <h3>Liste des offres</h3>
+    <input type="text"   [(ngModel)]="searchText" placeholder="search .." class="form-control" id="label">
+    <div>
+    
+        <div class="card"  *ngFor="let offre of listOffres" style="width:210px;display: inline-block;margin: 30px;">
+            <img class="card-img-top" src="../../assets/{{offre.image}}" alt="Card image" style="width: 200px;height:300px">
+            <div class="card-body">
+              <h4 class="card-title">{{offre.titre}} - {{offre.prix}} DT</h4>
+              <p class="card-text">jusqu'à:  {{offre.date_validite}}</p>
+              <a href="#" class="btn btn-primary">Details</a>
+            </div>
+          </div>
+          
+    </div>
+</div>
